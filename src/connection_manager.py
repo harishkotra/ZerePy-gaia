@@ -9,6 +9,7 @@ from src.connections.openai_connection import OpenAIConnection
 from src.connections.twitter_connection import TwitterConnection
 from src.connections.farcaster_connection import FarcasterConnection
 from src.connections.ollama_connection import OllamaConnection
+from src.connections.gaia_connection import GaiaConnection
 from src.connections.echochambers_connection import EchochambersConnection
 from src.connections.solana_connection import SolanaConnection
 from src.connections.hyperbolic_connection import HyperbolicConnection
@@ -48,6 +49,8 @@ class ConnectionManager:
             return EternalAIConnection
         elif class_name == "ollama":
             return OllamaConnection
+        elif class_name == "gaia":
+            return GaiaConnection
         elif class_name == "echochambers":
             return EchochambersConnection
         elif class_name == "goat":
